@@ -11,7 +11,7 @@
     "array.prototype.find": "1.0.0",
     "array.prototype.findindex": "2.0.0",
     "asch-js": "*",
-    "asch-sandbox": "https://github.com/AschPlatform/asch-sandbox-dist/tarball/master",
+    "sandbox-dist": "https://github.com/salinsunny2/sandbox-dist.git",
     "async": "1.5.2",
     "bignumber": "https://github.com/AschPlatform/bignumber/tarball/master",
     "bitcore-mnemonic": "^1.2.5",
