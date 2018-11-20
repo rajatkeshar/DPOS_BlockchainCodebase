@@ -18,6 +18,7 @@ module.exports = {
   totalAmount:  210000000000000000,
   initialSupply: 17420000000000000,
   maxTxsPerBlock: 500,
+  defaultCurrency: 'SRN',
   fees: {
     send: 0.1,
     secondsignature: 1,
