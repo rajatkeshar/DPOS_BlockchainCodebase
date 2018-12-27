@@ -1,5 +1,6 @@
+var constants = require('./constants');
 /**
- * Get time from Asch epoch.
+ * Get time from epoch.
  * @param {number|undefined} time Time in unix seconds
  * @returns {number}
  */
@@ -21,9 +22,9 @@ function getEpochTime(time) {
 
 module.exports = {
 
-  interval: 10,
+  interval: constants.blockIntervalTime,
 
-  delegates: 101,
+  delegates: constants.activeDelegates,
 
   getTime: function (time) {
     return getEpochTime(time);

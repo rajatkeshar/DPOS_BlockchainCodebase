@@ -18,6 +18,8 @@ module.exports = {
   totalAmount:  210000000000000000,
   initialSupply: 17420000000000000,
   maxTxsPerBlock: 500,
+  blockIntervalTime: 10,
+  activeDelegates: 101,
   defaultCurrency: 'SRN',
   fees: {
     send: 0.1,
