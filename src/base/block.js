@@ -4,6 +4,7 @@ var ed = require('../utils/ed.js');
 var bignum = require('bignumber');
 var BlockStatus = require("../utils/block-status.js");
 var constants = require('../utils/constants.js');
+var addressHelper = require('../utils/address');
 
 var genesisblock = null;
 // Constructor
@@ -16,15 +17,19 @@ function Block(scope, cb) {
 // Private methods
 var private = {};
 private.blockStatus = new BlockStatus();
-private.getAddressByPublicKey = function (publicKey) {
-  var publicKeyHash = crypto.createHash('sha256').update(publicKey, 'hex').digest();
-  var temp = new Buffer(8);
-  for (var i = 0; i < 8; i++) {
-    temp[i] = publicKeyHash[7 - i];
-  }
+// private.getAddressByPublicKey = function (publicKey) {
+//   var publicKeyHash = crypto.createHash('sha256').update(publicKey, 'hex').digest();
+//   var temp = new Buffer(8);
+//   for (var i = 0; i < 8; i++) {
+//     temp[i] = publicKeyHash[7 - i];
+//   }
 
-  var address = bignum.fromBuffer(temp).toString();
-  return address;
+//   var address = bignum.fromBuffer(temp).toString();
+//   return address;
+// }
+
+private.getAddressByPublicKey = function (publicKey) {
+  return addressHelper.generateBase58CheckAddress(publicKey)
 }
 
 // Public methods
