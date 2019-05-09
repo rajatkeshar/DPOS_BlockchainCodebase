@@ -1,0 +1,88 @@
+{
+    "paths": {
+        "/peers": {
+			"get": {
+				"tags": [
+					"Peers Controller"
+				],
+				"description": "Get Peers On Blockchain",
+				"summary": "This API is used to get the peers",
+				"operationId": "peers",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/peers/version": {
+			"get": {
+				"tags": [
+					"Peers Controller"
+				],
+				"description": "Get version Of Blockchain",
+				"summary": "This API is used to get the version of blockchain",
+				"operationId": "version",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

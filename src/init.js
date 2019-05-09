@@ -161,6 +161,8 @@ module.exports = function(options, done) {
       var cors = require('cors');
       var app = express();
 
+      require('../swagger').docs(app);
+
       app.use(compression({ level: 6 }));
       app.use(cors());
       app.options("*", cors());

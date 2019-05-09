@@ -1,0 +1,259 @@
+{
+	"paths": {
+		"/accounts/new": {
+			"get": {
+				"tags": [
+					"Accounts Controller"
+				],
+				"description": "create new wallet address",
+				"summary": "This API is used to create new wallet address",
+				"operationId": "new",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/open": {
+			"post": {
+				"tags": [
+					"Accounts Controller"
+				],
+				"description": "Login Into the Wallet",
+				"summary": "This API use to login into the wallet",
+				"operationId": "open",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Login Into the Wallet",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"secret": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/getBalance": {
+			"get": {
+				"tags": [
+					"Accounts Controller"
+				],
+				"description": "get balance of wallet address",
+				"summary": "This API is used get balance of wallet address",
+				"operationId": "getBalance",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "address",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": "AK9nkRQnfVWbSGvJLqAFyAPGzr2apsSfK8"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/getPublicKey": {
+			"get": {
+				"tags": [
+					"Accounts Controller"
+				],
+				"description": "get publicKey of wallet address",
+				"summary": "This API is used get publicKey of wallet address",
+				"operationId": "getPublicKey",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "address",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": "AK9nkRQnfVWbSGvJLqAFyAPGzr2apsSfK8"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/generatePublicKey": {
+			"post": {
+				"tags": [
+					"Accounts Controller"
+				],
+				"description": "Generate Public Key for Account",
+				"summary": "This API use to generate public key for account",
+				"operationId": "generatePublicKey",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Generate Public Key",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"secret": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

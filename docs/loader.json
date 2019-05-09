@@ -1,0 +1,88 @@
+{
+    "paths": {
+        "/loader/status": {
+			"get": {
+				"tags": [
+					"Loaders Controller"
+				],
+				"description": "Get Status Of Blockchain",
+				"summary": "This API is used to get the blockchain status",
+				"operationId": "status",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/loader/status/sync": {
+			"get": {
+				"tags": [
+					"Loaders Controller"
+				],
+				"description": "Get Sync Status Of Blockchain",
+				"summary": "This API is used to get the blockchain sync status",
+				"operationId": "syncStatus",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

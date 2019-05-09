@@ -1,0 +1,460 @@
+{
+    "paths": {
+        "/blocks": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Blocks",
+				"summary": "This API is used to get blocks",
+				"operationId": "getBlocks",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "generatorPublicKey",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "totalAmount",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "totalFee",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "reward",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "previousBlock",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "height",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "orderBy",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/blocks/get": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Block info",
+				"summary": "This API is used to get block info by block Id or height",
+				"operationId": "getBlock",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "id",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "height",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/blocks/full": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Full Block info",
+				"summary": "This API is used to get full block info by block Id or height",
+				"operationId": "getFullBlock",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "id",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "height",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/blocks/getHeight": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Current Height of Blockchain",
+				"summary": "This API is used to get current height of blockchain",
+				"operationId": "getHeight",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/blocks/getMilestone": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Current Milestone of Blockchain",
+				"summary": "This API is used to get current milestone of blockchain",
+				"operationId": "getMilestone",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/blocks/getReward": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Current Rewards Point of Blockchain",
+				"summary": "This API is used to get current rewards point of blockchain",
+				"operationId": "getReward",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/blocks/getSupply": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Current supply of Blockchain",
+				"summary": "This API is used to get current supply of blockchain",
+				"operationId": "getSupply",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/blocks/getStatus": {
+			"get": {
+				"tags": [
+					"Blocks Controller"
+				],
+				"description": "Get Status of Blockchain",
+				"summary": "This API is used to get the status of blockchain",
+				"operationId": "getStatus",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+    }
+}

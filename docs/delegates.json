@@ -1,0 +1,320 @@
+{
+    "paths": {
+        "/delegates/count": {
+			"get": {
+				"tags": [
+					"Delegates Controller"
+				],
+				"description": "Get Total Delegates Count on Blockchain",
+				"summary": "This API is used to get total delegate count on blockchain",
+				"operationId": "count",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/delegates/voters": {
+			"get": {
+				"tags": [
+					"Delegates Controller"
+				],
+				"description": "Get Voters on Delegate",
+				"summary": "This API is used to get the voters on delegate",
+				"operationId": "votersOnDelegate",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "publicKey",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/delegates": {
+			"get": {
+				"tags": [
+					"Delegates Controller"
+				],
+				"description": "Get Delegates",
+				"summary": "This API is used to get delegates",
+				"operationId": "getDelegates",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "orderBy",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/delegates/fee": {
+			"get": {
+				"tags": [
+					"Delegates Controller"
+				],
+				"description": "Get Fee To Become Delegate",
+				"summary": "This API is used to get fee to become delegate",
+				"operationId": "getFee",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/delegates/forging/getForgedByAccount": {
+			"get": {
+				"tags": [
+					"Delegates Controller"
+				],
+				"description": "Get Forged By Account",
+				"summary": "This API is used to get forged by account",
+				"operationId": "getForgedByAccount",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "generatorPublicKey",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/delegates/": {
+			"put": {
+				"tags": [
+					"Delegates Controller"
+				],
+				"description": "Register Delegates",
+				"summary": "This API is used to register delegates",
+				"operationId": "addDelegates",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Caste Or Revoke Votes",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "secret": {"type": "string", "required": true},
+                                    "publicKey": {"type": "string"},
+                                    "seconSecret": {"type": "string"},
+                                    "username": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

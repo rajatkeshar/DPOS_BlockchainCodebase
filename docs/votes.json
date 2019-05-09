@@ -1,0 +1,155 @@
+{
+	"paths": {
+		"/accounts/votes": {
+			"get": {
+				"tags": [
+					"Votes Controller"
+				],
+				"description": "Get voted delegates by address",
+				"summary": "This API is used to get voted delegates by address",
+				"operationId": "votes",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "address",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": "AK9nkRQnfVWbSGvJLqAFyAPGzr2apsSfK8"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/votes/fee": {
+			"get": {
+				"tags": [
+					"Votes Controller"
+				],
+				"description": "get fee to cast and remove votes",
+				"summary": "This API is used cast and remove votes to delegates",
+				"operationId": "fee",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/accounts/votes/": {
+			"put": {
+				"tags": [
+					"Votes Controller"
+				],
+				"description": "Cast of Revoke Votes",
+				"summary": "This API use to caste or revoke votes",
+				"operationId": "casteOrRevokeVotes",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Caste Or Revoke Votes",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "secret": {"type": "string", "required": true},
+                                    "publicKey": {"type": "string"},
+                                    "seconSecret": {"type": "string"},
+                                    "delegates": {"type": "array", "items": { "type": "string"}, "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

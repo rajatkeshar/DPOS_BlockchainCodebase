@@ -181,9 +181,9 @@ private.attachApi = function () {
     "get /getBalance": "getBalance",
     "get /getPublicKey": "getPublickey",
     "post /generatePublicKey": "generatePublickey",
-    "get /delegates": "getDelegates",
-    "get /delegates/fee": "getDelegatesFee",
-    "put /delegates": "addDelegates",
+    "get /votes": "getDelegates",
+    "get /votes/fee": "getDelegatesFee",
+    "put /votes": "addDelegates",
     "get /": "getAccount",
     "get /new": "newAccount"
   });
