@@ -60,6 +60,10 @@ module.exports = {
                     "description": "Contains Signatures API"
                 },
                 {
+                    "name": "System Controller",
+                    "description": "Contains System API"
+                },
+                {
                     "name": "Transactions Controller",
                     "description": "Contains Transactions API"
                 },

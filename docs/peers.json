@@ -11,7 +11,71 @@
 				"produces": [
 					"application/json"
 				],
-				"parameters": [],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "state",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "os",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "version",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "port",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "orderBy",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+                ],
 				"responses": {
 					"200": {
 						"description": "Success",
@@ -54,6 +118,67 @@
 					"application/json"
 				],
 				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/peers/get": {
+			"get": {
+				"tags": [
+					"Peers Controller"
+				],
+				"description": "Get Peers Details By IP & Port",
+				"summary": "This API is used to get the peers details by ip & port",
+				"operationId": "peersById",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "ip",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "port",
+						"required": true,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+                ],
 				"responses": {
 					"200": {
 						"description": "Success",

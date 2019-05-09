@@ -354,6 +354,7 @@ private.attachApi = function () {
   router.map(shared, {
     "get /": "getTransactions",
     "get /get": "getTransaction",
+    "get /fee": "getFee",
     "get /unconfirmed/get": "getUnconfirmedTransaction",
     "get /unconfirmed": "getUnconfirmedTransactions",
     "put /": "addTransactions"
@@ -859,6 +860,13 @@ shared.getTransaction = function (req, cb) {
       cb(null, { transaction: transaction });
     });
   });
+}
+
+shared.getFee = function (req, cb) {
+  
+  fee = constants.fees.send * constants.fixedPoint;
+
+  cb(null, {fee: fee})
 }
 
 shared.getUnconfirmedTransaction = function (req, cb) {
