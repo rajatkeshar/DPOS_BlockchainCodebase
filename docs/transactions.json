@@ -1,0 +1,385 @@
+{
+    "paths": {
+        "/transactions": {
+			"get": {
+				"tags": [
+					"Transactions Controller"
+				],
+				"description": "Get All transactions",
+				"summary": "This API is used to get all transactions happning in blockchain",
+				"operationId": "getAllTransactions",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "blockId",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "type",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "senderPublicKey",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "senderId",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "recipientId",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "orderBy",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/transactions/get": {
+			"get": {
+				"tags": [
+					"Transactions Controller"
+				],
+				"description": "Get Transaction By ID",
+				"summary": "This API is used to get transaction by id",
+				"operationId": "getTransactionById",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/transactions/unconfirmed": {
+			"get": {
+				"tags": [
+					"Transactions Controller"
+				],
+				"description": "Get UnConfirmed transactions",
+				"summary": "This API is used to get unconfirmed transactions",
+				"operationId": "getUnConfirmedTransactions",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "senderPublicKey",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "address",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/transactions/unconfirmed/get": {
+			"get": {
+				"tags": [
+					"Transactions Controller"
+				],
+				"description": "Get UnConfirmed Transaction By ID",
+				"summary": "This API is used to get unconfirmed transaction by id",
+				"operationId": "getUnConfirmedTransactionById",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/transactions/fee": {
+			"get": {
+				"tags": [
+					"Transactions Controller"
+				],
+				"description": "Get Fee To send Transactions",
+				"summary": "This API is used to get fee to send transactions",
+				"operationId": "getFee",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/transactions/": {
+			"put": {
+				"tags": [
+					"Transactions Controller"
+				],
+				"description": "Send Transactions",
+				"summary": "This API is used to send transactions",
+				"operationId": "sendTransactions",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Send Transactions",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "secret": {"type": "string", "required": true},
+                                    "publicKey": {"type": "string"},
+                                    "seconSecret": {"type": "string"},
+                                    "amount": {"type": "number", "required": true},
+                                    "message": {"type": "string"}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

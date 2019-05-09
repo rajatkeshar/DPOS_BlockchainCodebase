@@ -1,0 +1,395 @@
+{
+    "paths": {
+        "/dapps": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Get All Applications",
+				"summary": "This API is used to get all application",
+				"operationId": "getApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "category",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "name",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "link",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "type",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "orderBy",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    },
+                    {
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/get": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Get Application By ID",
+				"summary": "This API is used to get application by id",
+				"operationId": "getApplicationById",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "query",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/": {
+			"put": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Register Applications",
+				"summary": "This API is used to register applications",
+				"operationId": "registerApplications",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Register Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "secret": {"type": "string", "required": true},
+                                    "publicKey": {"type": "string"},
+                                    "seconSecret": {"type": "string"},
+                                    "category": {"type": "number", "required": true},
+                                    "name": {"type": "string", "required": true},
+                                    "description": {"type": "string", "required": true},
+                                    "tags": {"type": "string", "required": false},
+                                    "type": {"type": "number", "required": false, "example": 0},
+                                    "link": {"type": "string", "required": true},
+                                    "icon": {"type": "string", "required": true},
+                                    "delegates": {
+                                        "type": "array", 
+                                        "required": true,
+                                        "items" :{
+                                            "type": "string" 
+                                        },
+                                        "example": [
+                                            "db18d5799944030f76b6ce0879b1ca4b0c2c1cee51f53ce9b43f78259950c2fd",
+                                            "590e28d2964b0aa4d7c7b98faee4676d467606c6761f7f41f99c52bb4813b5e4",
+                                            "bfe511158d674c3a1e21111223a49770bee93611d998e88a5d2ea3145de2b68b",
+                                            "7bbf62931cf3c596591a580212631aff51d6bc0577c54769953caadb23f6ab00",
+                                            "452df9213aedb3b9fed6db3e2ea9f49d3db226e2dac01828bc3dcd73b7a953b4"
+                                        ]
+                                    },
+                                    "unlockDelegates": {"type": "number", "required": true, "example": 3}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/launch": {
+			"post": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Launch Applications",
+				"summary": "This API is used to launch installed applications",
+				"operationId": "launchApplications",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Launch Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "id": {"type": "string", "required": true},
+                                    "master": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/install": {
+			"post": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Install Applications",
+				"summary": "This API is used to install registered applications",
+				"operationId": "installApplications",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Install Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "id": {"type": "string", "required": true},
+                                    "master": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/installed": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Installed Applications",
+				"summary": "This API is used to get installed applications",
+				"operationId": "installedApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

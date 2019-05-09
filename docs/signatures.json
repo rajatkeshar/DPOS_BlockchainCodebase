@@ -1,0 +1,103 @@
+{
+    "paths": {
+        "/signatures/fee": {
+			"get": {
+				"tags": [
+					"Signatures Controller"
+				],
+				"description": "Get Fee To Create Second Signature",
+				"summary": "This API is used to get fee for second signature",
+				"operationId": "getFee",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/signatures/": {
+			"put": {
+				"tags": [
+					"Signatures Controller"
+				],
+				"description": "Register Second Password",
+				"summary": "This API is used to register second password for account",
+				"operationId": "addSignature",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Create Second Password",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "secret": {"type": "string", "required": true},
+                                    "publicKey": {"type": "string"},
+                                    "secondSecret": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "paths": {
+        "/system": {
+			"get": {
+				"tags": [
+					"System Controller"
+				],
+				"description": "Get System Info",
+				"summary": "This API is used to get system info",
+				"operationId": "getFee",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}
