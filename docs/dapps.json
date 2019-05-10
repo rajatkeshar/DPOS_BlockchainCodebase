@@ -158,6 +158,48 @@
 				}
 			}
         },
+        "/dapps/categories": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Applications Categories",
+				"summary": "This API returns categories of applications on blockchain",
+				"operationId": "ApplicationsCategories",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
         "/dapps/": {
 			"put": {
 				"tags": [
@@ -361,6 +403,328 @@
 					"application/json"
 				],
 				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/installedIds": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Installed Applications Ids",
+				"summary": "This API returns installed ids of applications",
+				"operationId": "installedApplicationsIds",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/ismasterpasswordenabled": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Applications Master Password Is Enable",
+				"summary": "This API returns master password is enable or not in application",
+				"operationId": "ApplicationsMasterPasswordEnables",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/installing": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Installing Applications",
+				"summary": "This API returns installing application on blockchain",
+				"operationId": "ApplicationsInstalling",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/removing": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Removing Applications",
+				"summary": "This API returns removing applications from blockchain",
+				"operationId": "ApplicationsRemoving",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/launched": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Launched Applications",
+				"summary": "This API returns launched applications on blockchain",
+				"operationId": "ApplicationsLaunched",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/stop": {
+			"post": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Stop Your Applications",
+				"summary": "This API is used to stop your launched applications",
+				"operationId": "stopApplications",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Stop Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "id": {"type": "string", "required": true},
+                                    "master": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+        },
+        "/dapps/uninstall": {
+			"post": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Uninstall Your Applications",
+				"summary": "This API is used to uninstall your applications",
+				"operationId": "uninstallApplications",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Uninstall Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "id": {"type": "string", "required": true},
+                                    "master": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
 				"responses": {
 					"200": {
 						"description": "Success",
