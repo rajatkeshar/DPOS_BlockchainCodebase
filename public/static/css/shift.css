@@ -1,0 +1,29 @@
+/* Shift custom styles */
+.pass-banner{background:#cd2122 url(/images/triangles.png) no-repeat left top;background-size:cover;}
+.pass-window-icon{background-color:#152836}
+
+#header{background-color:#2d556f}
+#header .btn.btn-blue, #header .btn.btn-blue-nav {background-color: #cd2122!important}
+#header #balance {background-color: rgba(0,0,0,.12)}
+.account-block, #menu li.active{background-color:transparent}
+#sidebar-wrapper{background-color:#333333}
+.panel.widget.widget-brown{color:#2d556f;border-top:4px solid #cd2122}
+.nav-underline>li.active a {border-bottom-color: #cd2122}
+
+.panel-default table td a {color:#178d97}
+.panel-default table td a:hover, .panel-default table td a:active {color:#cd2122}
+[type=checkbox].filled-in.violet:checked+label:after {
+    border: 2px solid #cd2122;
+    background-color: #cd2122;
+}
+
+/* Fix forge stats floating */
+.info-panel-grey {overflow:hidden;}
+.info-panel .title, .info-panel.info-panel-grey .title {opacity:1;font-size:1em;}
+.info-panel-grey .plain-text {width:50%;white-space:nowrap;}
+
+/* dApps */
+.cover-image {
+  background: #284b62; 
+  background: linear-gradient(to bottom right, #284b62, #4a7998); 
+}

@@ -1,0 +1,5 @@
+<div ng-if="dapp.target === 'iframe'" class="clearfix" ng-include="'/partials/dapp-frame.html'">
+</div>
+
+<div ng-if="dapp.target === '_self'" class="clearfix" ng-include="'/dapps/'+dapp.transactionId+'/'">
+</div>

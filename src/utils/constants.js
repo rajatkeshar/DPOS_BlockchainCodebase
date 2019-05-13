@@ -23,9 +23,9 @@ module.exports = {
   defaultCurrency: 'SRN',
   fees: {
     send: 0.1,
-    secondsignature: 1,
+    secondsignature: 5,
     delegate: 100,
-    vote: 1,
+    vote: 0.1,
     multisignature: 5,
     dapp: 50,
     inTransfer: 0.1,

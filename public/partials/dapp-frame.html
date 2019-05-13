@@ -1,0 +1,28 @@
+<div ng-show="dapp.src !== undefined && dapp.target == 'iframe'" class="row">
+	<iframe id="dappFrame" style="width:100%;height:calc(100vh - 175px);margin-top:25px" ng-src="{{dapp.src}}" frameborder="0" marginheight="0" scrolling="auto" sandbox="allow-forms allow-scripts allow-popups"></iframe>
+	<script type="text/javascript" src="./bower_components/iframe-resizer/js/iframeResizer.min.js"></script>
+	<script>
+		var iframeWrapper = iFrameResize({
+		  log: false, 
+		  tolerance: 3,
+		  minHeight: 425,
+		  heightCalculationMethod: 'lowestElement',
+		  checkOrigin: true, 
+		  messageCallback: function(data){
+			var request = data.message.split(':');
+			if (request[0] == 'scope') {
+				var frameSrc = data.iframe.src, 
+					dappID = frameSrc.substring(frameSrc.lastIndexOf('/')+1,frameSrc.lenght), 
+					ctrlName = 'appController', 
+					scope = angular.element('div[ng-controller="' + ctrlName + '"]').scope();
+				if (scope && request[1] == 'secret') {
+					var response = request[1] + ':' + scope.rememberedPassphrase,
+						win = data.iframe,
+						doc = win.contentWindow || win.contentDocument;
+					doc.postMessage(response, '*'); 
+				}
+			}
+		  }
+		}, document.getElementById('dappFrame')); 
+	</script>
+</div>
