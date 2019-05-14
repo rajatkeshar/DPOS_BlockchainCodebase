@@ -16,15 +16,8 @@ stacktrace*
 tmp
 build
 *.pid
-public/dist
+
 package-lock.json
 .vs/
 .vscode
-public/bower_components
-public/npm-debug.log
-public/dist
-public/.sass-cache
-public/.tmp
-public/.gulp
-public/*.css
 *.save
