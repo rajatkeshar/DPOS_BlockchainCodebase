@@ -744,7 +744,8 @@ function DApp() {
       return setImmediate(cb, "Invalid unlock delegates number")
     }
 
-    checkDuplicate(trs, cb);
+    setImmediate(cb);
+    //checkDuplicate(trs, cb);
   }
 
   this.process = function (trs, sender, cb) {
@@ -2755,3 +2756,4 @@ shared.registerInterface = function (req, cb) {
 }
 
 module.exports = DApps;
+
