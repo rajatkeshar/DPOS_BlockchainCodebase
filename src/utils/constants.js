@@ -20,7 +20,7 @@ module.exports = {
   maxTxsPerBlock: 500,
   blockIntervalTime: 10,
   activeDelegates: 101,
-  defaultCurrency: 'SRN',
+  defaultCurrency: 'DEFAULT',
   fees: {
     send: 0.1,
     secondsignature: 5,
