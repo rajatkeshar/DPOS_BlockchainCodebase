@@ -84,7 +84,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -97,7 +97,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -136,7 +136,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -149,7 +149,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -178,7 +178,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -191,7 +191,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -230,10 +230,10 @@
                                     "link": {"type": "string", "required": true},
                                     "icon": {"type": "string", "required": true},
                                     "delegates": {
-                                        "type": "array", 
+                                        "type": "array",
                                         "required": true,
                                         "items" :{
-                                            "type": "string" 
+                                            "type": "string"
                                         },
                                         "example": [
                                             "db18d5799944030f76b6ce0879b1ca4b0c2c1cee51f53ce9b43f78259950c2fd",
@@ -257,7 +257,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -270,7 +270,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -313,7 +313,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -326,7 +326,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -369,7 +369,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -382,7 +382,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -411,7 +411,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -424,7 +424,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -453,7 +453,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -466,7 +466,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -495,7 +495,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -508,7 +508,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -537,7 +537,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -550,7 +550,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -579,7 +579,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -592,7 +592,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -621,7 +621,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -634,7 +634,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -677,7 +677,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -690,7 +690,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -733,7 +733,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -746,7 +746,7 @@
 								"schema": {
 									"type": "object",
 									"items": {
-										
+
 									}
 								}
 							}
@@ -754,6 +754,420 @@
 					}
 				}
 			}
-        }
+		},
+		"/dapps/{id}/blocks": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Get Sidechain Blocks",
+				"summary": "This API is used to get sidechain blocks",
+				"operationId": "getSidechainBlocks",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dapps/transaction": {
+			"put": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Recharge Applications",
+				"summary": "This API is used to recharge your applications",
+				"operationId": "rechargeApplications",
+				"produces": [
+					"application/json"
+				],
+				"requestBody": {
+					"description": "Recharge Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"secret": {"type": "string", "required": true},
+                                    "dappId": {"type": "string", "required": true},
+                                    "amount": {"type": "number", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dapps/{id}/transaction/withdrawal": {
+			"put": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Withdraw From Applications",
+				"summary": "This API is used to withdraw from your applications",
+				"operationId": "withdrawFromApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"requestBody": {
+					"description": "Withdraw From Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"secret": {"type": "string", "required": true},
+                                    "dappId": {"type": "string", "required": true},
+                                    "amount": {"type": "number", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dapps/{id}/transaction/confirmed": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Get All Transactions On Applications",
+				"summary": "This API is used get all transactions applications",
+				"operationId": "getAllTransactionsApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					},
+					{
+						"in": "query",
+						"name": "dappId",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					},
+					{
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": 0
+						}
+					},
+					{
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": 20
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dapps/{id}/transaction/unconfirmed": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Get All Unconfirmed Transactions On Applications",
+				"summary": "This API is used get all unconfirmed transactions applications",
+				"operationId": "getAllUnconfirmedTransactionsApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					},
+					{
+						"in": "query",
+						"name": "dappId",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					},
+					{
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": 0
+						}
+					},
+					{
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": 20
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dapps/{id}/transaction/transfers": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Get All Internal Transfers On Applications",
+				"summary": "This API is used get all Internal transafers applications",
+				"operationId": "getAllInternalTransfersApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					},
+					{
+						"in": "query",
+						"name": "dappId",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					},
+					{
+						"in": "query",
+						"name": "offset",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": 0
+						}
+					},
+					{
+						"in": "query",
+						"name": "limit",
+						"required": false,
+						"schema": {
+							"type": "number",
+							"example": 20
+						}
+                    }
+                ],
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
     }
 }
