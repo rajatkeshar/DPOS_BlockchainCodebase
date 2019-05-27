@@ -807,6 +807,134 @@
 				}
 			}
 		},
+		"/dapps/{id}/accounts/open": {
+			"post": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Login On Applications",
+				"summary": "This API is used to login into applications",
+				"operationId": "loginToApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"requestBody": {
+					"description": "Login On Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+                                    "secret": {"type": "string", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dapps/{id}/accounts/balance": {
+			"get": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Check Balance On Applications",
+				"summary": "This API is used to check balance into applications",
+				"operationId": "checkBalanceToApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					},
+					{
+						"in": "query",
+						"name": "address",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+					}
+                ],
+				"requestBody": {},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
 		"/dapps/transaction": {
 			"put": {
 				"tags": [
@@ -895,8 +1023,75 @@
 								"type": "object",
 								"properties": {
 									"secret": {"type": "string", "required": true},
-                                    "dappId": {"type": "string", "required": true},
                                     "amount": {"type": "number", "required": true}
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Success",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"items": {
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/dapps/{id}/transaction/inTransfer": {
+			"put": {
+				"tags": [
+					"Applications Controller"
+				],
+				"description": "Transfer Within Applications",
+				"summary": "This API is used to transfer within applications",
+				"operationId": "transferWithinApplications",
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+                    {
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"example": ""
+						}
+                    }
+                ],
+				"requestBody": {
+					"description": "Transfer Within Applications",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"secret": {"type": "string", "required": true},
+									"amount": {"type": "number", "required": true},
+									"recipientId": {"type": "string", "required": true}
 								}
 							}
 						}
@@ -947,15 +1142,6 @@
                     {
 						"in": "path",
 						"name": "id",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"example": ""
-						}
-					},
-					{
-						"in": "query",
-						"name": "dappId",
 						"required": true,
 						"schema": {
 							"type": "string",
@@ -1034,15 +1220,6 @@
 					},
 					{
 						"in": "query",
-						"name": "dappId",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"example": ""
-						}
-					},
-					{
-						"in": "query",
 						"name": "offset",
 						"required": false,
 						"schema": {
@@ -1105,15 +1282,6 @@
                     {
 						"in": "path",
 						"name": "id",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"example": ""
-						}
-					},
-					{
-						"in": "query",
-						"name": "dappId",
 						"required": true,
 						"schema": {
 							"type": "string",
